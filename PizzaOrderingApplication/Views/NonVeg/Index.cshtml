@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PizzaOrderingApplication.Models.PizzaDetails>
+
+<h1 style="font-family:'Monotype Corsiva'">Variety of Non-veg Pizzas</h1>
+<style>
+    #div1 {
+        float: left;
+        padding: 10px;
+        margin: 10px;
+        left: 0px;
+        top: 0px;
+        transition: left 3s top 3s;
+        font-family: 'Monotype Corsiva';
+    }
+
+        #div1:hover {
+            left: 3px;
+            top: 3px;
+        }
+
+    #btn1 {
+        position: center;
+        color: blue;
+    }
+</style>
+
+@foreach (var item in Model)
+{
+<div class="card" style="width: 18rem;" id="div1">
+    <a asp-for="PizzaName" title=(@item.PizzaName) asp-action="DetailsOfPizza" asp-route-id="@item.PizzaID">
+        <img src="~/Images/@item.PizzaImage" class="card-img-top" width="100" height="100" />
+        <div class="card-body">
+            <h5 class="card-title" style="color:black">@item.PizzaName</h5> <br />
+            @Html.DisplayFor(modelItem => item.PizzaType) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            @Html.DisplayFor(ModelItem => item.PizzaSize)
+            <br />
+            <br />
+            @Html.DisplayFor(modelItem => item.PizzaSecality) <br />
+            <br />
+            <h5 style="color:black"> Price </h5>
+            @item.PizzaPrice.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("hi-IN"))
+            <br />
+        </div>
+    </a>
+
+</div>
+}

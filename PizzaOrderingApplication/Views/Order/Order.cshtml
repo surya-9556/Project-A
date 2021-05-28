@@ -1,0 +1,210 @@
+﻿@model PizzaOrderingApplication.Models.OrderDetails
+
+@{
+    ViewData["Title"] = "Order";
+}
+
+
+<h4 style="font-family:'Monotype Corsiva'">OrderDetails</h4>
+<hr />
+<div class="row" style="font-family:'Monotype Corsiva'">
+    <div class="col-md-4">
+        <form asp-action="Order">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h3 style="font-family:'Monotype Corsiva'"> Necessary details </h3>
+            <br />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" maxlength="10" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <br />
+            <h2 style="font-family:'Monotype Corsiva'"> Select your favourite Pizza </h2>
+            <div class="form-group">
+                <label asp-for="PizzaName" class="control-label"></label>
+                <input asp-for="PizzaName" class="form-control" list="ddlPizza" />
+                <datalist id="ddlPizza">
+                    <option value="Margherita">Margherita</option>
+                    <option value="Farmhouse">Farmhouse</option>
+                    <option value="Peppy Paneer">Peppy Paneer</option>
+                    <option value="Veg Extravaganza">Veg Extravaganza</option>
+                    <option value="Veggie Paradise">Veggie Paradise</option>
+                    <option value="Cheese n Corn">Cheese n Corn</option>
+                    <option value="Pepper Barbecue Chicken">Pepper Barbecue Chicken</option>
+                    <option value="Chicken Sausage">Chicken Sausage</option>
+                    <option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+                    <option value="Moroccan Spice Pasta Pizza">Moroccan Spice Pasta Pizza</option>
+                    <option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+                    <option value="Double Cheese Margherita">Double Cheese Margherita</option>
+                    <option value="Mexican Green Wave">Mexican Green Wave</option>
+                    <option value="Fresh Veggie">Fresh Veggie</option>
+                    <option value="Paneer Makhani">Paneer Makhani</option>
+                    <option value="Indi Tandoori Paneer">Indi Tandoori Paneer</option>
+                    <option value="Achari Do Pyaza">Achari Do Pyaza</option>
+                    <option value="Moroccan Spice Pasta Pizza">Moroccan Spice Pasta Pizza</option>
+                    <option value="Chicken Golden Delight">Chicken Golden Delight</option>
+                    <option value="Non Veg Supreme">Non Veg Supreme</option>
+                    <option value="Chicken Fiesta">Chicken Fiesta</option>
+                    <option value="Chicken Dominator">Chicken Dominator</option>
+                    <option value="Pepper Barbecue & Onion">Pepper Barbecue & Onion</option>
+                    <option value="Indi Chicken Tikka">Indi Chicken Tikka</option>
+                    <option value="Keema Do Pyaza">Keema Do Pyaza</option>
+                </datalist>
+                <span asp-validation-for="PizzaName" class="text-danger"></span>
+            </div>
+
+            <h2 class="alert alert-info" style="font-family:'Monotype Corsiva'">If you wish to Order other kind of pizzas you can other wise leave them empty</h2>
+            <div class="form-group">
+                <label asp-for="PizzaName1" class="control-label"></label>
+                <input asp-for="PizzaName1" class="form-control" list="ddlPizza1" />
+                <datalist id="ddlPizza1">
+                    <option value="Margherita-199-veg">Margherita-199-veg</option>
+                    <option value="Farmhouse-395-veg">Farmhouse-395-veg</option>
+                    <option value="Peppy Paneer-395-veg">Peppy Paneer-395-veg</option>
+                    <option value="Veg Extravaganza-450-veg">Veg Extravaganza-450-veg</option>
+                    <option value="Veggie Paradise-395-veg">Veggie Paradise-395-veg</option>
+                    <option value="Cheese n Corn-305-veg">Cheese n Corn-305-veg</option>
+                    <option value="Pepper Barbecue Chicken-335-NonVeg">Pepper Barbecue Chicken-335-NonVeg</option>
+                    <option value="Chicken Sausage-395-NonVeg">Chicken Sausage-395-NonVeg</option>
+                    <option value="Creamy Tomato Pasta Pizza-395-Veg">Creamy Tomato Pasta Pizza-395-Veg</option>
+                    <option value="Moroccan Spice Pasta Pizza-305-Veg">Moroccan Spice Pasta Pizza-305-Veg</option>
+                    <option value="Creamy Tomato Pasta Pizza-395-NonVeg">Creamy Tomato Pasta Pizza-395-NonVeg</option>
+                    <option value="Double Cheese Margherita-335-veg">Double Cheese Margherita-335-veg</option>
+                    <option value="Mexican Green Wave-395-veg">Mexican Green Wave-395-veg</option>
+                    <option value="Fresh Veggie-335-veg">Fresh Veggie-335-veg</option>
+                    <option value="Paneer Makhani-395-veg">Paneer Makhani-395-veg</option>
+                    <option value="Indi Tandoori Paneer-450-veg">Indi Tandoori Paneer-450-veg</option>
+                    <option value="Achari Do Pyaza-305-veg">Achari Do Pyaza-305-veg</option>
+                    <option value="Moroccan Spice Pasta Pizza-335-NonVeg">Moroccan Spice Pasta Pizza-335-NonVeg</option>
+                    <option value="Chicken Golden Delight-450-NonVeg">Chicken Golden Delight-450-NonVeg</option>
+                    <option value="Non Veg Supreme-570-NonVeg">Non Veg Supreme-570-NonVeg</option>
+                    <option value="Chicken Fiesta-450-NonVeg">Chicken Fiesta-450-NonVeg</option>
+                    <option value="Chicken Dominator-570-NonVeg">Chicken Dominator-570-NonVeg</option>
+                    <option value="Pepper Barbecue & Onion-395-NonVeg">Pepper Barbecue & Onion-395-NonVeg</option>
+                    <option value="Indi Chicken Tikka-570-NonVeg">Indi Chicken Tikka-570-NonVeg</option>
+                    <option value="Keema Do Pyaza-305-NonVeg">Keema Do Pyaza-305-NonVeg</option>
+                </datalist>
+                <span asp-validation-for="PizzaName1" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PizzaName2" class="control-label"></label>
+                <input asp-for="PizzaName2" class="form-control" list="ddlPizza2" />
+                <datalist id="ddlPizza2">
+                    <option value="Margherita-199-veg">Margherita-199-veg</option>
+                    <option value="Farmhouse-395-veg">Farmhouse-395-veg</option>
+                    <option value="Peppy Paneer-395-veg">Peppy Paneer-395-veg</option>
+                    <option value="Veg Extravaganza-450-veg">Veg Extravaganza-450-veg</option>
+                    <option value="Veggie Paradise-395-veg">Veggie Paradise-395-veg</option>
+                    <option value="Cheese n Corn-305-veg">Cheese n Corn-305-veg</option>
+                    <option value="Pepper Barbecue Chicken-335-NonVeg">Pepper Barbecue Chicken-335-NonVeg</option>
+                    <option value="Chicken Sausage-395-NonVeg">Chicken Sausage-395-NonVeg</option>
+                    <option value="Creamy Tomato Pasta Pizza-395-Veg">Creamy Tomato Pasta Pizza-395-Veg</option>
+                    <option value="Moroccan Spice Pasta Pizza-305-Veg">Moroccan Spice Pasta Pizza-305-Veg</option>
+                    <option value="Creamy Tomato Pasta Pizza-395-NonVeg">Creamy Tomato Pasta Pizza-395-NonVeg</option>
+                    <option value="Double Cheese Margherita-335-veg">Double Cheese Margherita-335-veg</option>
+                    <option value="Mexican Green Wave-395-veg">Mexican Green Wave-395-veg</option>
+                    <option value="Fresh Veggie-335-veg">Fresh Veggie-335-veg</option>
+                    <option value="Paneer Makhani-395-veg">Paneer Makhani-395-veg</option>
+                    <option value="Indi Tandoori Paneer-450-veg">Indi Tandoori Paneer-450-veg</option>
+                    <option value="Achari Do Pyaza-305-veg">Achari Do Pyaza-305-veg</option>
+                    <option value="Moroccan Spice Pasta Pizza-335-NonVeg">Moroccan Spice Pasta Pizza-335-NonVeg</option>
+                    <option value="Chicken Golden Delight-450-NonVeg">Chicken Golden Delight-450-NonVeg</option>
+                    <option value="Non Veg Supreme-570-NonVeg">Non Veg Supreme-570-NonVeg</option>
+                    <option value="Chicken Fiesta-450-NonVeg">Chicken Fiesta-450-NonVeg</option>
+                    <option value="Chicken Dominator-570-NonVeg">Chicken Dominator-570-NonVeg</option>
+                    <option value="Pepper Barbecue & Onion-395-NonVeg">Pepper Barbecue & Onion-395-NonVeg</option>
+                    <option value="Indi Chicken Tikka-570-NonVeg">Indi Chicken Tikka-570-NonVeg</option>
+                    <option value="Keema Do Pyaza-305-NonVeg">Keema Do Pyaza-305-NonVeg</option>
+                </datalist>
+                <span asp-validation-for="PizzaName2" class="text-danger"></span>
+            </div>
+
+            <h3 style="font-family:'Monotype Corsiva'">Extra flavours to the pizza</h3>
+            <div class="form-group">
+                <label asp-for="Crusting" class="control-label"></label>
+                <input asp-for="Crusting" class="form-control" list="ddlCrusting" />
+                <datalist id="ddlCrusting">
+                    <option value="New hand tosted">New hand tosted-(costs extra-10/-)</option>
+                    <option value="Wheat thin crust">Wheat thin crust-(costs extra-15/-)</option>
+                    <option value="Cheese brust">Cheese brust-(costs extra-25/-)</option>
+                    <option value="Fresh pan pizza">Fresh pan pizza-(costs extra-15/-)</option>
+                </datalist>
+                <span asp-validation-for="Crusting" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td><label asp-for="Toppings" class="control-label"></label></td>
+                        <td>
+                            <input asp-for="Toppings" class="form-control" type="checkbox" checked /> Yes
+                            <input asp-for="Toppings" class="form-control" type="checkbox" /> No
+                        </td>
+                    </tr>
+                </table>
+                <span asp-validation-for="Toppings" class="text-danger"></span>
+            </div>
+            <h3 style="font-family:'Monotype Corsiva'"> Number of slices to be made </h3>
+            <div class="form-group">
+                <label asp-for="Slices" class="control-label"></label>
+                <input asp-for="Slices" class="form-control" list="ddlSlicing" />
+                <datalist id="ddlSlicing">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                </datalist>
+                <span asp-validation-for="Slices" class="text-danger"></span>
+            </div>
+
+
+            <div class="container">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    Order Now
+                </button>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h4 class="modal-title">Conform the order</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                once the oreder is placed there is no returning back..
+                            </div>
+                            <div class="modal-body">
+                                There will be a varation in the final amount based on your extra needs and quantity of the pizza...
+                            </div>
+
+                            <div class="modal-footer">
+                                <input type="submit" value="Conform the order" class="btn btn-danger" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

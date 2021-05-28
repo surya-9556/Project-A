@@ -1,0 +1,68 @@
+﻿@model PizzaOrderingApplication.Models.PizzaDetails
+
+@{
+    ViewData["Title"] = "UpdatePizza";
+}
+
+<h1>UpdatePizza</h1>
+
+<h4>PizzaDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4" style="font-family:'Monotype Corsiva'">
+        <form asp-action="UpdatePizza">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PizzaID" />
+            <div class="form-group">
+                <label asp-for="PizzaName" class="control-label"></label>
+                <input asp-for="PizzaName" class="form-control" />
+                <span asp-validation-for="PizzaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PizzaSize" class="control-label" for="ddlSize"></label>
+                <input asp-for="PizzaSize" class="form-control" list="ddlSize" />
+                <datalist id="ddlSize">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </datalist>
+                <span asp-validation-for="PizzaSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PizzaType" class="control-label" for="ddlType"></label>
+                <input asp-for="PizzaType" class="form-control" list="ddlType" />
+                <datalist id="ddlType">
+                    <option value="Veg">Veg</option>
+                    <option value="Non-veg">Non-veg</option>
+                </datalist>
+                <span asp-validation-for="PizzaType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PizzaSecality" class="control-label"></label>
+                <input asp-for="PizzaSecality" class="form-control" />
+                <span asp-validation-for="PizzaSecality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PizzaPrice" class="control-label"></label>
+                <input asp-for="PizzaPrice" class="form-control" />
+                <span asp-validation-for="PizzaPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PizzaImage" class="control-label"></label>
+                <input asp-for="PizzaImage" class="form-control" />
+                <span asp-validation-for="PizzaImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

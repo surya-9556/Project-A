@@ -1,0 +1,76 @@
+﻿@model PizzaOrderingApplication.Models.OrderDetails
+
+@{
+    ViewData["Title"] = "Status";
+}
+
+<div>
+    <h4 style="font-family:'Monotype Corsiva'"> Your order has been placed. It will take 30 to 45 min of time to prepare. your order details are given below. </h4>
+    <hr />
+    <dl class="row" id="#dl" style="font-family:'Monotype Corsiva'">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PizzaName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PizzaName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PizzaName1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PizzaName1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PizzaName2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PizzaName2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Crusting)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Crusting)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Toppings)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Toppings)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Slices)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Slices)
+        </dd>
+    </dl>
+
+    <h1 style="font-family:'Monotype Corsiva'">Final Amount: </h1>  
+    <h2 style="font-family:'Monotype Corsiva'">@ViewBag.FinalPrice.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("hi-IN"))</h2>
+</div>
+
