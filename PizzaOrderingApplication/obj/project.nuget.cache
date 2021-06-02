@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5/hr4DnmhmNnznDUxrUXAfiiRIJaJtonDbdWwZ7EmtsoTMWoRzUcmt9lhxbe5fmtwknc77l94a+uHm5CXRMS6Q==",
+  "dgSpecHash": "r3TFuxdPHwWWTRhM/1Wt+Q0+59Cw5Pj+hdNSS4sRNp9N7ygJHGhfai2Rcsln+mdv5BiVfkP90yiLTuHIk0khOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Softura\\Sotura project\\PizzaOrderingApplication\\PizzaOrderingApplication.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Softura\\Project-A\\PizzaOrderingApplication\\PizzaOrderingApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

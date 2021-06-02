@@ -25,7 +25,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
+                @*<input asp-for="Address" class="form-control" />*@
+                <textarea asp-for="Address" class="form-control" ></textarea>
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <br />
@@ -67,32 +68,32 @@
             <div class="form-group">
                 <label asp-for="PizzaName1" class="control-label"></label>
                 <input asp-for="PizzaName1" class="form-control" list="ddlPizza1" />
-                <datalist id="ddlPizza1">
-                    <option value="Margherita-199-veg">Margherita-199-veg</option>
-                    <option value="Farmhouse-395-veg">Farmhouse-395-veg</option>
-                    <option value="Peppy Paneer-395-veg">Peppy Paneer-395-veg</option>
-                    <option value="Veg Extravaganza-450-veg">Veg Extravaganza-450-veg</option>
-                    <option value="Veggie Paradise-395-veg">Veggie Paradise-395-veg</option>
-                    <option value="Cheese n Corn-305-veg">Cheese n Corn-305-veg</option>
-                    <option value="Pepper Barbecue Chicken-335-NonVeg">Pepper Barbecue Chicken-335-NonVeg</option>
-                    <option value="Chicken Sausage-395-NonVeg">Chicken Sausage-395-NonVeg</option>
-                    <option value="Creamy Tomato Pasta Pizza-395-Veg">Creamy Tomato Pasta Pizza-395-Veg</option>
-                    <option value="Moroccan Spice Pasta Pizza-305-Veg">Moroccan Spice Pasta Pizza-305-Veg</option>
-                    <option value="Creamy Tomato Pasta Pizza-395-NonVeg">Creamy Tomato Pasta Pizza-395-NonVeg</option>
-                    <option value="Double Cheese Margherita-335-veg">Double Cheese Margherita-335-veg</option>
-                    <option value="Mexican Green Wave-395-veg">Mexican Green Wave-395-veg</option>
-                    <option value="Fresh Veggie-335-veg">Fresh Veggie-335-veg</option>
-                    <option value="Paneer Makhani-395-veg">Paneer Makhani-395-veg</option>
-                    <option value="Indi Tandoori Paneer-450-veg">Indi Tandoori Paneer-450-veg</option>
-                    <option value="Achari Do Pyaza-305-veg">Achari Do Pyaza-305-veg</option>
-                    <option value="Moroccan Spice Pasta Pizza-335-NonVeg">Moroccan Spice Pasta Pizza-335-NonVeg</option>
-                    <option value="Chicken Golden Delight-450-NonVeg">Chicken Golden Delight-450-NonVeg</option>
-                    <option value="Non Veg Supreme-570-NonVeg">Non Veg Supreme-570-NonVeg</option>
-                    <option value="Chicken Fiesta-450-NonVeg">Chicken Fiesta-450-NonVeg</option>
-                    <option value="Chicken Dominator-570-NonVeg">Chicken Dominator-570-NonVeg</option>
-                    <option value="Pepper Barbecue & Onion-395-NonVeg">Pepper Barbecue & Onion-395-NonVeg</option>
-                    <option value="Indi Chicken Tikka-570-NonVeg">Indi Chicken Tikka-570-NonVeg</option>
-                    <option value="Keema Do Pyaza-305-NonVeg">Keema Do Pyaza-305-NonVeg</option>
+                <datalist id="ddlPizza">
+                    <option value="Margherita">Margherita</option>
+                    <option value="Farmhouse">Farmhouse</option>
+                    <option value="Peppy Paneer">Peppy Paneer</option>
+                    <option value="Veg Extravaganza">Veg Extravaganza</option>
+                    <option value="Veggie Paradise">Veggie Paradise</option>
+                    <option value="Cheese n Corn">Cheese n Corn</option>
+                    <option value="Pepper Barbecue Chicken">Pepper Barbecue Chicken</option>
+                    <option value="Chicken Sausage">Chicken Sausage</option>
+                    <option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+                    <option value="Moroccan Spice Pasta Pizza">Moroccan Spice Pasta Pizza</option>
+                    <option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+                    <option value="Double Cheese Margherita">Double Cheese Margherita</option>
+                    <option value="Mexican Green Wave">Mexican Green Wave</option>
+                    <option value="Fresh Veggie">Fresh Veggie</option>
+                    <option value="Paneer Makhani">Paneer Makhani</option>
+                    <option value="Indi Tandoori Paneer">Indi Tandoori Paneer</option>
+                    <option value="Achari Do Pyaza">Achari Do Pyaza</option>
+                    <option value="Moroccan Spice Pasta Pizza">Moroccan Spice Pasta Pizza</option>
+                    <option value="Chicken Golden Delight">Chicken Golden Delight</option>
+                    <option value="Non Veg Supreme">Non Veg Supreme</option>
+                    <option value="Chicken Fiesta">Chicken Fiesta</option>
+                    <option value="Chicken Dominator">Chicken Dominator</option>
+                    <option value="Pepper Barbecue & Onion">Pepper Barbecue & Onion</option>
+                    <option value="Indi Chicken Tikka">Indi Chicken Tikka</option>
+                    <option value="Keema Do Pyaza">Keema Do Pyaza</option>
                 </datalist>
                 <span asp-validation-for="PizzaName1" class="text-danger"></span>
             </div>
@@ -100,32 +101,32 @@
             <div class="form-group">
                 <label asp-for="PizzaName2" class="control-label"></label>
                 <input asp-for="PizzaName2" class="form-control" list="ddlPizza2" />
-                <datalist id="ddlPizza2">
-                    <option value="Margherita-199-veg">Margherita-199-veg</option>
-                    <option value="Farmhouse-395-veg">Farmhouse-395-veg</option>
-                    <option value="Peppy Paneer-395-veg">Peppy Paneer-395-veg</option>
-                    <option value="Veg Extravaganza-450-veg">Veg Extravaganza-450-veg</option>
-                    <option value="Veggie Paradise-395-veg">Veggie Paradise-395-veg</option>
-                    <option value="Cheese n Corn-305-veg">Cheese n Corn-305-veg</option>
-                    <option value="Pepper Barbecue Chicken-335-NonVeg">Pepper Barbecue Chicken-335-NonVeg</option>
-                    <option value="Chicken Sausage-395-NonVeg">Chicken Sausage-395-NonVeg</option>
-                    <option value="Creamy Tomato Pasta Pizza-395-Veg">Creamy Tomato Pasta Pizza-395-Veg</option>
-                    <option value="Moroccan Spice Pasta Pizza-305-Veg">Moroccan Spice Pasta Pizza-305-Veg</option>
-                    <option value="Creamy Tomato Pasta Pizza-395-NonVeg">Creamy Tomato Pasta Pizza-395-NonVeg</option>
-                    <option value="Double Cheese Margherita-335-veg">Double Cheese Margherita-335-veg</option>
-                    <option value="Mexican Green Wave-395-veg">Mexican Green Wave-395-veg</option>
-                    <option value="Fresh Veggie-335-veg">Fresh Veggie-335-veg</option>
-                    <option value="Paneer Makhani-395-veg">Paneer Makhani-395-veg</option>
-                    <option value="Indi Tandoori Paneer-450-veg">Indi Tandoori Paneer-450-veg</option>
-                    <option value="Achari Do Pyaza-305-veg">Achari Do Pyaza-305-veg</option>
-                    <option value="Moroccan Spice Pasta Pizza-335-NonVeg">Moroccan Spice Pasta Pizza-335-NonVeg</option>
-                    <option value="Chicken Golden Delight-450-NonVeg">Chicken Golden Delight-450-NonVeg</option>
-                    <option value="Non Veg Supreme-570-NonVeg">Non Veg Supreme-570-NonVeg</option>
-                    <option value="Chicken Fiesta-450-NonVeg">Chicken Fiesta-450-NonVeg</option>
-                    <option value="Chicken Dominator-570-NonVeg">Chicken Dominator-570-NonVeg</option>
-                    <option value="Pepper Barbecue & Onion-395-NonVeg">Pepper Barbecue & Onion-395-NonVeg</option>
-                    <option value="Indi Chicken Tikka-570-NonVeg">Indi Chicken Tikka-570-NonVeg</option>
-                    <option value="Keema Do Pyaza-305-NonVeg">Keema Do Pyaza-305-NonVeg</option>
+                <datalist id="ddlPizza">
+                    <option value="Margherita">Margherita</option>
+                    <option value="Farmhouse">Farmhouse</option>
+                    <option value="Peppy Paneer">Peppy Paneer</option>
+                    <option value="Veg Extravaganza">Veg Extravaganza</option>
+                    <option value="Veggie Paradise">Veggie Paradise</option>
+                    <option value="Cheese n Corn">Cheese n Corn</option>
+                    <option value="Pepper Barbecue Chicken">Pepper Barbecue Chicken</option>
+                    <option value="Chicken Sausage">Chicken Sausage</option>
+                    <option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+                    <option value="Moroccan Spice Pasta Pizza">Moroccan Spice Pasta Pizza</option>
+                    <option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+                    <option value="Double Cheese Margherita">Double Cheese Margherita</option>
+                    <option value="Mexican Green Wave">Mexican Green Wave</option>
+                    <option value="Fresh Veggie">Fresh Veggie</option>
+                    <option value="Paneer Makhani">Paneer Makhani</option>
+                    <option value="Indi Tandoori Paneer">Indi Tandoori Paneer</option>
+                    <option value="Achari Do Pyaza">Achari Do Pyaza</option>
+                    <option value="Moroccan Spice Pasta Pizza">Moroccan Spice Pasta Pizza</option>
+                    <option value="Chicken Golden Delight">Chicken Golden Delight</option>
+                    <option value="Non Veg Supreme">Non Veg Supreme</option>
+                    <option value="Chicken Fiesta">Chicken Fiesta</option>
+                    <option value="Chicken Dominator">Chicken Dominator</option>
+                    <option value="Pepper Barbecue & Onion">Pepper Barbecue & Onion</option>
+                    <option value="Indi Chicken Tikka">Indi Chicken Tikka</option>
+                    <option value="Keema Do Pyaza">Keema Do Pyaza</option>
                 </datalist>
                 <span asp-validation-for="PizzaName2" class="text-danger"></span>
             </div>
@@ -195,6 +196,7 @@
 
                             <div class="modal-footer">
                                 <input type="submit" value="Conform the order" class="btn btn-danger" />
+                                <a class="btn btn-success ml-3" asp-action="Order">Cancel</a>
                             </div>
 
                         </div>

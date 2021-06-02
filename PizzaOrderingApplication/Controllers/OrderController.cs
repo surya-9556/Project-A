@@ -72,14 +72,20 @@ namespace PizzaOrderingApplication.Controllers
                 //This piece or line of code will fetch the last ordered details.
                 var res = _Context.OrderDetails.OrderBy(i => i.OrderId).LastOrDefault();
 
-                string t = Convert.ToString(res.PizzaName);
+                string t = res.PizzaName;
+                string t2 = res.PizzaName1;
+                string t3 = res.PizzaName2;
 
                 var res1 = _Context.PizzaDetails.Where(i => i.PizzaName == t).FirstOrDefault();
+                var res2 = _Context.PizzaDetails.Where(i => i.PizzaName == t2).FirstOrDefault();
+                var res3 = _Context.PizzaDetails.Where(i => i.PizzaName == t3).FirstOrDefault();
 
-                double price = Convert.ToDouble(res1.PizzaPrice);
+                double price1 = res1.PizzaPrice;
+                double price2 = res1.PizzaPrice;
+                double price3 = res1.PizzaPrice;
 
                 //Here that records data will be consumed and only one coloum id will be taken and that will be converted to int.
-                int id = Convert.ToInt32(res.OrderId);
+                int id = res.OrderId;
 
                 //Here that id will be consumed and fecthes that paeticular record alone.
                 OrderDetails details = _repos.Get(id);
@@ -89,16 +95,16 @@ namespace PizzaOrderingApplication.Controllers
                 switch (s)
                 {
                     case "New hand tosted":
-                        ViewBag.Price = price+10;
+                        ViewBag.Price = price1+10;
                         break;
                     case "Wheat thin crust":
-                        ViewBag.Price = price+15;
+                        ViewBag.Price = price1+15;
                         break;
                     case "Cheese brust":
-                        ViewBag.Price = price+20;
+                        ViewBag.Price = price1+20;
                         break;
                     case "Fresh pan pizza":
-                        ViewBag.Price = price+15;
+                        ViewBag.Price = price1+15;
                         break;
                     default:
                         break;
@@ -106,41 +112,7 @@ namespace PizzaOrderingApplication.Controllers
 
                 int Qty = Convert.ToInt32(res.Quantity);
 
-                switch (Qty)
-                {
-                    case 1:
-                        ViewBag.FinalPrice = ViewBag.Price * 1;
-                        break;
-                    case 2:
-                        ViewBag.FinalPrice = ViewBag.Price * 2;
-                        break;
-                    case 3:
-                        ViewBag.FinalPrice = ViewBag.Price * 3;
-                        break;
-                    case 4:
-                        ViewBag.FinalPrice = ViewBag.Price * 4;
-                        break;
-                    case 5:
-                        ViewBag.FinalPrice = ViewBag.Price * 5;
-                        break;
-                    case 6:
-                        ViewBag.FinalPrice = ViewBag.Price * 6;
-                        break;
-                    case 7:
-                        ViewBag.FinalPrice = ViewBag.Price * 7;
-                        break;
-                    case 8:
-                        ViewBag.FinalPrice = ViewBag.Price * 8;
-                        break;
-                    case 9:
-                        ViewBag.FinalPrice = ViewBag.Price * 9;
-                        break;
-                    case 10:
-                        ViewBag.FinalPrice = ViewBag.Price * 10;
-                        break;
-                    default:
-                        break;
-                }
+                ViewBag.FinalPrice = (ViewBag.Price + price2 + price3) * Qty;
 
                 return View(details); 
             }
